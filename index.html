@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <title>Practica 1. DAW</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
+    <META NAME="Author" CONTENT="José Espejo Roig">
+    <link id="css_base" rel="stylesheet" href="estilos/estilos.css" />
+    <script src="javascript/jquery-2.2.1.min.js"></script>
+    <!-- <script src="javascript/jquery.mobile-1.4.5.min.js"></script> -->
+    <script src="javascript/accesoDatos.js"></script>
+    <!-- <script src="javascript/detectmobilebrowser.js"></script> -->
+
+    <plantilla>
+      <link rel=Stylesheet href="estilos/movil.css" type="text/css" media="screen and (max-width:400px) and (min-width:1px)" />
+      <link rel=Stylesheet href="estilos/movil.css" type="text/css" media="handheld, only screen and (max-device-width:980px)"/>
+      <link rel=Stylesheet href="estilos/tablet.css" type="text/css" media="screen and (max-width:900px) and (min-width:401px)" />
+      <link rel=Stylesheet href="estilos/estilos.css" type="text/css" media="screen and (max-width:1400px) and (min-width:901px)" />
+      <link rel=Stylesheet href="estilos/pchd.css" type="text/css" media="screen and (max-width:3600px) and (min-width:1401px)" />
+    </plantilla>
+
+
+  </head>
+
+
+  <body>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <header>
+        <img class="portada" id="portada" src="images/el_tiempo_ancho_30_con_texto.jpg">
+        <div><a id="area_inicio" href="#"></a></div>
+        <div class="now_temp">
+          <p id="js_w_munic"></p>
+          <p id="temp_big"></p>
+        </div>
+        <div class="viento">
+          <img id="flechaWind" src= "images/flechaN.png">
+          <p id="js_w_windS"></p>
+        </div>
+        <div class="busqueda">
+          <form id="newSolicitudForm" >
+            <div class="input_text">
+              <input type="text" name="municipio" id="municipio" placeholder="Municipio" required="required"/>
+            </div>
+            <div class"input_btn">
+              <input type="button" id = "consultar" name="consultar" value="Consultar"/>
+            </div>
+          </form>
+        </div>
+
+    </header>
+    <main>
+      <nav id="barra_nav">
+        <ul>
+            <li><a id = "home" data-tip= "Go Home" title="home" href="#">Home</a></li>
+            <li><a id = "ver_frcst" data-tip= "Ver previsión a 7 días" title="ver_frcst" href="#barra_nav">Ver Predicción 7 días</a></li>
+            <li><a id = "buscar_en_mapa" data-tip= "Buscar en el mapa" title="buscar_en_mapa" href="#barra_nav">Buscar con Mapa</a></li>
+            <li><a id = "enlaces" data-tip= "Enlaces" title="enlaces" href="#barra_nav">Enlaces</a></li>
+        </ul>
+      </nav>
+      <div id="nav_movil"></div>
+      <section class="section__main">
+          <div id="contenido" title="inicio"></div>
+      </section>
+    </main>
+    <footer>
+      <p class=copyright>©José Espejo Roig</p>
+    </footer>
+  </body>
+</html>
