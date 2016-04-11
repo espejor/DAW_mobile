@@ -67,25 +67,36 @@
           <div id="contenido" title="inicio"></div>
       </section>
     </main> -->
-  <a href="#pantalla2" data-role="button"> Ir a Pantalla 2 </a>
+
+      <div data-role="content">
+        <ul data-role="listview" >
+          <li><a href="#forecast">Previsión a 7 días</a></li>
+          <li><a href="#mapa">Buscar en mapa</a></li>
+          <li><a href="#enlaces">Enlaces</a></li>
+        </ul>
+    </div>
     <footer>
       <p class=copyright>©José Espejo Roig</p>
     </footer>
   </div>
 
 <!---Inicio Header pantalla 2----------------->
-    <div data-role="page" id="pantalla2" data-add-back-btn>
+    <div data-role="page" id="forecast" data-add-back-btn>
       <div data-role="header" data-theme="e" data-position="fixed">
-       <h1> Pantalla 2 </h1>
-       <div data-role="navbar" data-theme="a">
-          <ul>
-            <li><a href="#" data-icon="home" class="ui-btn-active">Home</a></li>
-            <li><a href="#" data-icon="grid">Previsión</a></li>
-            <li><a href="#" data-icon="star">Mapa</a></li>
-            <li><a href="#" data-icon="info">Enlaces</a></li>
-          </ul>
-        </div>
+       <h1>Previsión a 7 días</h1>
       </div><!-- Fin Header pantalla 2-->
+
+
+      <footer data-role="footer">
+        <div data-role="navbar" data-theme="a" data-position="fixed" data-id="pie_comun">
+           <ul>
+             <li><a href="#" data-icon="home" class="ui-btn-active">Home</a></li>
+             <li><a href="#" data-icon="grid">Previsión</a></li>
+             <li><a href="#" data-icon="star">Mapa</a></li>
+             <li><a href="#" data-icon="info">Enlaces</a></li>
+           </ul>
+         </div>
+      </footer>
     </div><!-- Fin pantalla 2-->
 
 <!---Inicio Header pantalla 3----------------->
