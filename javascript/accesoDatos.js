@@ -60,15 +60,15 @@ function asignaMunicipio(){
 }
 
 
-$(document).ready(function(){
+$(document).live( 'pageinit',function(event){
   // Variables de inico
   app.apikey = "05b19ab20e25b29516d13983b8491391";
   app.municipio = "Sevilla";
   // Cargar contenido principal de la página
-  cargaChunks();
+//  cargaChunks();
   // Asignación de manejadores de eventos
   $('#consultar').click(asignaMunicipio);
-  $('#home').click(cargaChunks);
+//  $('#home').click(cargaChunks);
   $('#ver_frcst').click(app.cargaDatosFrcst);
   $('#buscar_en_mapa').click(crearMapa);
   $('#area_inicio').click(miTiempo)
