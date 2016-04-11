@@ -5,3 +5,21 @@
 .portada{
   width: 100%;
 }
+
+div .now_temp{
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  color: white;
+}
+
+div.viento{
+  position: absolute;
+  left: 100px;
+  top: 50px;
+  color: white;
+}
+
+img #flechaWind{
+  width: 40px;
+}
