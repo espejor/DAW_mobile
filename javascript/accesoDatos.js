@@ -67,7 +67,7 @@ $(document).bind( 'mobileinit',function(){
   // Cargar contenido principal de la página
 //  cargaChunks();
   // Asignación de manejadores de eventos
-  $('#consultar').click(asignaMunicipio);
+//  $('#consultar').click(asignaMunicipio);
 //  $('#home').click(cargaChunks);
   $('#ver_frcst').click(app.cargaDatosFrcst);
   $('#buscar_en_mapa').click(crearMapa);
