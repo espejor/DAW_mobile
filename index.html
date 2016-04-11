@@ -8,8 +8,8 @@
     <META NAME="Author" CONTENT="José Espejo Roig">
     <link id="css_base" rel="stylesheet" href="javascript/jquerymobile/jquery.mobile-1.4.5.min.css" />
     <script src="javascript/jquery-2.2.1.min.js"></script>
-    <script src="javascript/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
     <script src="javascript/accesoDatos.js"></script>
+    <script src="javascript/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
     <!-- <script src="javascript/detectmobilebrowser.js"></script> -->
 
     <!-- <plantilla>
@@ -25,13 +25,13 @@
 
 
   <body>
-    <div data-role="page" id="inicio">
+    <div data-role="page" id="home">
     <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
     <header>
       <div data-role="header">
-      <h1>cabecera</h1>
-        <!-- <img class="portada" id="portada" src="images/el_tiempo_ancho_30_con_texto.jpg">
-        <div><a id="area_inicio" href="#"></a></div>
+      <h1>Mi tiempo</h1>
+      <img class="portada" id="portada" src="images/el_tiempo_ancho_30_con_texto.jpg">
+        <!--         <div><a id="area_inicio" href="#"></a></div>
         <div class="now_temp">
           <p id="js_w_munic"></p>
           <p id="temp_big"></p>
@@ -110,18 +110,26 @@
       <footer data-role="footer">
         <div data-role="navbar" data-theme="a" data-position="fixed" data-id="pie_comun">
            <ul>
-             <li><a href="#" data-icon="home" class="ui-btn-active">Home</a></li>
+             <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
              <li><a href="#" data-icon="grid">Previsión</a></li>
-             <li><a href="#" data-icon="star">Mapa</a></li>
-             <li><a href="#" data-icon="info">Enlaces</a></li>
+             <li><a href="#mapa" data-icon="star">Mapa</a></li>
+             <li><a href="#enlaces" data-icon="info">Enlaces</a></li>
            </ul>
          </div>
       </footer>
     </div><!-- Fin pantalla 2-->
 
-<!---Inicio Header pantalla 3----------------->
-    <div data-role="page" id="pantalla3">
-       <h1> Pantalla 3 </h1>
+    <!---Inicio Página mapa----------------->
+    <div data-role="page" id="mapa">
+      <!---Inicio Header mapa----------------->
+       <h1> Mapa </h1>
+    </div>
+
+
+    <!---Inicio Página enlaces----------------->
+    <div data-role="page" id="enlaces">
+      <!---Inicio Header mapa----------------->
+       <h1> Enlaces  </h1>
     </div>
   </body>
 </html>
