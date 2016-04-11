@@ -8,7 +8,7 @@
 
 div .now_temp{
   position: absolute;
-  top: 50px;
+  top: 0px;
   left: 10px;
   color: white;
 }
@@ -16,10 +16,10 @@ div .now_temp{
 div.viento{
   position: absolute;
   left: 100px;
-  top: 50px;
+  top: 5px;
   color: white;
 }
 
 img #flechaWind{
-  width: 30px;
+  width: 25px;
 }
