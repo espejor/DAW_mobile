@@ -1,0 +1,309 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(http://fonts.googleapis.com/css?family=Merienda);
+
+body,html{
+	width:100%;
+	height:100%;
+	margin:0px;
+	padding:0px;
+}
+
+body{
+	overflow:visible;
+	background-color: black;
+}
+#contenido{
+	width:62%;
+	float: right;
+}
+header{
+	width:100%;
+	position: fixed;
+	z-index: 9999;
+	top: 0px;
+}
+.section__main{
+	width:100%;
+	height:100%;
+	position:relative;
+	display: block;
+	font-size: 1.5em;
+}
+main {
+	position: absolute;
+	top: 27em;
+	width: 100%
+}
+
+
+/*#titulo{
+	position:absolute;
+	width:600px;
+    height:100px;
+	margin:0px;
+	padding:0px;
+    }*/
+h1,h2,h3,h4,h5,h6,p {
+    padding:0px;
+    margin:0px;
+    }
+h1{
+	font-family: 'Merienda', cursive;
+	color:black;
+	text-shadow:0px 4px 8px rgba(0,0,0,0.4);
+    }
+h2{
+	font-style:italic;
+	font-weight:normal;
+	font-size:14px;
+	text-shadow:0px 4px 8px rgba(255,255,255,0.4);
+	position:relative;
+	top:0px;
+	left:20px;
+    }
+/*#logo{
+	width:100px;
+	height:100px;
+	margin-right:20px;
+	margin-bottom:20px;
+	background:url('../img/logo.png');
+	float:left;
+	}*/
+nav{
+	/*margin-top:100px;*/
+	border:1px solid grey;
+	width:37%;
+	box-shadow:-25px 0px 50px rgba(0,0,0,0.2) inset;
+	position:fixed;
+	z-index:10;
+	float:left;
+}
+nav ul{
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+    }
+nav ul li{
+	width:96%;
+	border-bottom:1px solid grey;
+	/*height:50px;*/
+	padding:11px;
+	font-size:2em;
+	text-transform:uppercase;
+}
+nav ul li a{
+	color:white;
+	text-shadow:3px 3px 3px grey;
+	text-decoration:none;
+	}
+/*#banner{
+	width:60%;
+	margin-left:35%;
+	margin-top:20px;
+	margin-bottom:10px;
+	border:0px;
+	background:url('../img/banner.png');
+	background-size:100% 100%;
+	-webkit-box-shadow:0px 10px 25px rgba(0,0,0,0.4);
+	box-shadow:0px 10px 25px rgba(0,0,0,0.4);
+	}
+#contenidoarticulo{
+	width:65%;
+	float:left;
+	padding:20px;
+	box-shadow:0px 10px 25px rgba(0,0,0,0.3);
+	}
+article {
+	width:50%;
+	height:30px;
+	overflow:hidden;
+	margin-top:20px;
+	margin-bottom:10px;
+	transition:all 1s;
+	border-bottom:1px dashed grey;
+	}
+article:focus{
+	height:480px;
+	}
+article .contenidoarticulo h3{
+	font-family: 'Merienda', cursive;
+	background:url('../img/open.png');
+	background-repeat:no-repeat;
+	padding-left:30px;
+	font-size:20px;
+    }
+.imagen_articulo {
+	width:200px;
+	height:100px;
+	background:grey;
+	float:left;
+	margin-right:10px;
+	margin-top:30px;
+	}
+#img1{
+	background:url('../img/img1.jpg');
+	background-size:100% 100%;
+	}
+#img2{
+	background:url('../img/img2.jpg');
+	background-size:100% 100%;
+	}
+#img3{
+	background:url('../img/img3.jpg');
+	background-size:100% 100%;
+	}*/
+footer{
+	margin-top:-250px;
+	height:30px;
+	text-align:center;
+    }
+/*FORMULARIO*/
+#newSolicitudForm{
+	width:55%;
+	padding:20px;
+	margin-top:10px;
+	margin-left:33%;
+}
+#newSolicitudForm form{
+	width:90%;
+	margin:auto;
+	padding:10px;
+	box-shadow:5px 5px 25px rgba(0,0,0,0.3);
+	margin-top:10px;
+    }
+#newSolicitudForm form input[type=text], #newSolicitudForm form textarea{
+  	width: 90%;
+  	font-size:20px;
+  	padding:10px;
+  	height:20px;
+  	margin:auto;
+  	margin-left:5px;
+  	-webkit-box-shadow:0px 0px 25px rgba(0,0,0,0.3) inset;
+    box-shadow:0px 0px 25px rgba(0,0,0,0.3) inset;
+    border-radius: .6em;
+	}
+#newSolicitudForm form textarea{
+	 height:100px;
+	}
+#newSolicitudForm form input{
+  	width:50%;
+  	margin:20px;
+  	font-size:20px;
+  	padding: .3em;
+    border-radius: .6em;
+	}
+#newSolicitudForm form .formleyenda{
+	margin:5px;
+	}
+/*BLOG*/
+/*#articulos{
+	width:40%;
+	background:white;
+	float:left;
+	padding:20px;
+	box-shadow:0px 10px 25px rgba(0,0,0,0.3);
+	margin-right:20px;
+	}
+#articulos article{
+	width:100%;
+	float:none;
+	}
+aside{
+	padding:5px;
+	margin:10px;
+	height:100%;
+	}
+#contenedorarticulosblog #articulos article:focus{
+	overflow-y:auto;
+	}
+#contenedorarticulosblog #articulos article h3{
+	font-family: 'Merienda', cursive;
+	background:url('../img/open.png');
+	background-repeat:no-repeat;
+	padding-left:30px;
+	font-size:20px;
+    }
+.imagenarticuloblog{
+	width:100%;
+	height:200px;
+	margin-top:10px;
+	margin-bottom:20px;
+	}
+#imgblog1{
+	background:url('../img/imgblog1.jpg');
+	background-size: 100% 100%;
+    }
+#imgblog2{
+	background:url('../img/imgblog2.jpg');
+	background-size: 100% 100%;
+    }
+#imgblog3{
+	background:url('../img/imgblog3.jpg');
+	background-size: 100% 100%;
+    }
+#imgblog4{
+	background:url('../img/imgblog4.jpg');
+	background-size: 100% 100%;
+    }
+#sobre{
+	margin-top:120px;
+	}
+/*PRODUCTOS*/
+/*#contenedorproductos{
+	width:60%;
+	background:white;
+	float:left;
+	padding:20px;
+	box-shadow:0px 10px 25px rgba(0,0,0,0.3);
+	}
+#contenedorproductos article{
+	border-bottom:none;
+	}
+.artproducto{
+	width:48%;
+	height:100px;
+	float:left;
+	}
+.artproducto h3{
+	font-family: 'Merienda', cursive;
+	color:black;
+	text-decoration:underline;
+	text-shadow:0px 4px 8px rgba(0,0,0,0.4);
+	}
+.artproducto p{
+	margin:10px;
+	border:0px solid transparent;
+	border-radius:0px 20px 20px 0px;
+	padding:10px;
+	background: rgb(94,98,104); /* Old browsers */
+	/*background: -moz-linear-gradient(top,  rgba(94,98,104,1) 0%, rgba(130,140,149,1) 55%, rgba(181,189,200,1) 100%); /* FF3.6+ */
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(94,98,104,1)), color-stop(55%,rgba(130,140,149,1)), color-stop(100%,rgba(181,189,200,1))); /* Chrome,Safari4+ */*/
+	/*background: -webkit-linear-gradient(top,  rgba(94,98,104,1) 0%,rgba(130,140,149,1) 55%,rgba(181,189,200,1) 100%); /* Chrome10+,Safari5.1+ */*/
+	/*background: -o-linear-gradient(top,  rgba(94,98,104,1) 0%,rgba(130,140,149,1) 55%,rgba(181,189,200,1) 100%); /* Opera 11.10+ */*/
+	/*background: -ms-linear-gradient(top,  rgba(94,98,104,1) 0%,rgba(130,140,149,1) 55%,rgba(181,189,200,1) 100%); /* IE10+ */*/
+	/*background: linear-gradient(to bottom,  rgba(94,98,104,1) 0%,rgba(130,140,149,1) 55%,rgba(181,189,200,1) 100%); /* W3C */*/
+	/*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5e6268', endColorstr='#b5bdc8',GradientType=0 ); /* IE6-9 */*/
+	/*box-shadow:0px 10px 15px rgba(0,0,0,0.4);
+	margin-bottom:30px;
+	}
+.artproducto p a{
+	color:white;
+	font-weight:bold;
+	font-size:12px;
+	text-decoration:none;
+	}*/
+
+footer{
+	display:none;
+	}
+
+	#contenido .icon_big img {
+	    width: 12em;
+	    padding: 1em;
+	}
+
+div .section_forecast{
+	    font-size: 1.2em;
+}
