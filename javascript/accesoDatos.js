@@ -36,7 +36,7 @@ function falloPosicion(objPositionError){
       alert("No se ha podido acceder a la información de su posición.");
     break;
     case objPositionError.TIMEOUT:
-      alert("El servicio ha tardado demasiado tiempo en responder.");
+      alert("El servicio ha tardado demasiado tiempo en responder. Inténtelo de nuevo");
     break;
     default:
       alert("Error desconocido.");
@@ -46,7 +46,7 @@ function falloPosicion(objPositionError){
 var geoData = {
   enableHighAccuracy: false,
   maximumAge        : 30000,
-  timeout           : 4000
+  timeout           : 8000
 };
 
 //---------- FIN Geoloacalización
@@ -69,9 +69,9 @@ $(document).bind( 'mobileinit',function(){
   // Asignación de manejadores de eventos
 //  $('#consultar').click(asignaMunicipio);
 //  $('#home').click(cargaChunks);
-  $('#ver_frcst').click(app.cargaDatosFrcst);
-  $('#buscar_en_mapa').click(crearMapa);
-  $('#area_inicio').click(miTiempo)
+  // $('#ver_frcst').click(app.cargaDatosFrcst);
+  // $('#buscar_en_mapa').click(crearMapa);
+  // $('#area_inicio').click(miTiempo)
   // Cargar datos meteorológicos de la portada
   miTiempo();
   //  app.cargaDatosFrcst();
