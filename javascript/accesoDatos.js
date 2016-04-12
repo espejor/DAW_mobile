@@ -85,9 +85,9 @@ function miTiempo(){
 
 function cargaChunks(){
   $('#contenido').css("height","auto");
-  $('#contenido').attr("title","inicio");
-  $('#nav_movil').load("iconos.html");
-  $('#contenido').load("iconos.html");
+//  $('#contenido').attr("title","inicio");
+//  $('#nav_movil').load("iconos.html");
+//  $('#contenido').load("iconos.html");
 }
 
 app.cargaDatos = function() {
@@ -109,7 +109,7 @@ app.cargaDatos = function() {
       if ($('#contenido').attr("title") == "forecast"){
         app.cargaDatosFrcst();
       }
-      if ($('#contenido').attr("title") == "mapa"){
+      if ($('#contenido_mapa').attr("title") == "mapa"){
         obtenerCoordenada();
         crearMapa();
       }
@@ -182,6 +182,7 @@ app.procesaDatos = function() {
   app.portada = "images/" + app.datos.weather[0].icon+".jpg";
   app.muestra();
 }
+
 app.procesaDatos_frcst = function() {
   app.fecha_frcst = new Array(7);
   app.temp_max_frcst = new Array(7);
@@ -304,7 +305,7 @@ function crearMapa(){
   // mapholder = document.getElementById('contenido')
   // mapholder.style.height = '250px';
   $('#contenido').css("height","500px");
-  $('#contenido').attr("title","mapa");
+  $('#contenido_mapa').attr("title","mapa");
 
   var myOptions = {
     center:latlon,zoom:8,
