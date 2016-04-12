@@ -17,14 +17,13 @@ function getLocation(){
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(cargaPosicion,falloPosicion,geoData);
     }
+    app.cargaDatos();
   }
 
 
 function cargaPosicion(position) {
   latitud = position.coords.latitude;
   longitud = position.coords.longitude;
-  app.cargaDatos();
-//  app.cargaDatosFrcst();
 }
 
 function falloPosicion(objPositionError){
@@ -64,30 +63,11 @@ $(document).bind( 'mobileinit',function(){
   // Variables de inico
   app.apikey = "05b19ab20e25b29516d13983b8491391";
   app.municipio = "Sevilla";
-  // Cargar contenido principal de la página
-//  cargaChunks();
-  // Asignación de manejadores de eventos
-//  $('#consultar').click(asignaMunicipio);
-//  $('#home').click(cargaChunks);
-  // $('#ver_frcst').click(app.cargaDatosFrcst);
-  // $('#buscar_en_mapa').click(crearMapa);
-  // $('#area_inicio').click(miTiempo)
-  // Cargar datos meteorológicos de la portada
   miTiempo();
-  //  app.cargaDatosFrcst();
-
 });
 
 function miTiempo(){
   getLocation();
-//  app.cargaDatos();
-}
-
-function cargaChunks(){
-//  $('#contenido').css("height","auto");
-//  $('#contenido').attr("title","inicio");
-//  $('#nav_movil').load("iconos.html");
-//  $('#contenido').load("iconos.html");
 }
 
 app.cargaDatos = function() {
@@ -106,40 +86,33 @@ app.cargaDatos = function() {
     success: function(data) {
       app.datos = data;
       app.procesaDatos();
-//      if ($('#contenido').attr("title") == "forecast"){
-        app.cargaDatosFrcst();
-      // }
-      // if ($('#contenido_mapa').attr("title") == "mapa"){
-        obtenerCoordenada();
-        crearMapa();
-        $('#cabecera_mapa').html("El tiempo en " + app.municipio.toUpperCase())
-//      }
+      app.cargaDatosFrcst();
+      cargarMapa();
     },
     error: function() {
-//      $('#contenido').load("error.html");
-//      $('#contenido').attr("title","error");
+      $('#content_error').load("error.html");
     }
   });
 }
 
-function obtenerCoordenada(){
-  // // Creamos el Objeto Geocoder
-  // var geocoder = new google.maps.Geocoder();
-  // // Hacemos la petición indicando la dirección e invocamos la función
-  // // geocodeResult enviando todo el resultado obtenido
-  // geocoder.geocode({ 'address': municipio}, geocodeResult);
+function cargarMapa(){
+  obtenerCoordenada();
+  crearMapa();
+  $('#cabecera_mapa').html("El tiempo en " + app.municipio.toUpperCase())
+}
 
+function obtenerCoordenada(){
   longitud = app.datos.coord.lon;
   latitud = app.datos.coord.lat;
 }
 
-function geocodeResult(results, status){
-  if (status == 'OK'){
-    latitud = results[0].geometry.location.lat();
-    longitud = results[0].geometry.location.lng();
-    crearMapa();
-  }
-}
+// function geocodeResult(results, status){
+//   if (status == 'OK'){
+//     latitud = results[0].geometry.location.lat();
+//     longitud = results[0].geometry.location.lng();
+//     crearMapa();
+//   }
+// }
 
 app.cargaDatosFrcst = function() {
   if (latitud && longitud){
@@ -154,9 +127,7 @@ app.cargaDatosFrcst = function() {
       app.procesaDatos_frcst();
     },
     error: function() {
-//      alert("Ups! No puedo obtener información de la previsión a una semana");
-      // $('#contenido').load("errorFrcst.html");
-      // $('#contenido').attr("title","errorFrcst");
+      $('#content_error').load("errorFrcst.html");
     }
   });
 }
@@ -228,13 +199,9 @@ app.muestra = function() {
   $('#flechaWind').css("WebkitTransform",funcionRotar);
   $('#js_w_munic').html(app.municipio);
   $('#js_w_icon').attr("src",app.icono);
-  $('#js_w_temp_icon').attr("src",iconoTemp);
   $('#js_w_temp').html(app.temperatura + " ºC");
-  $('#js_w_wind_Icon').attr("src",iconoWind);
   $('#js_w_windS').html(app.windSpeed + " m/s");
   $('#js_w_windD').html(app.windDir + " º");
-  $('#js_w_humedad').html(app.humedad + " %");
-  $('#js_w_humedad_Icon').attr("src",iconoHumedad);
 }
 
 
@@ -289,10 +256,6 @@ function getMes(mesNum){
 
 function crearMapa(){
   latlon = new google.maps.LatLng(latitud, longitud)
-  // mapholder = document.getElementById('contenido')
-  // mapholder.style.height = '250px';
-  //$('#contenido_mapa').css("height","100");
-//  $('#contenido_mapa').attr("title","mapa");
 
   var myOptions = {
     center:latlon,zoom:8,
@@ -308,12 +271,6 @@ function crearMapa(){
     draggable:true,
     title:"Qué tiempo hace aquí"
   });
-  // map.addListener('click', function(e) {
-  //   var coordenadas = e.latLng;
-  //   latitud = coordenadas.lat();
-  //   longitud = coordenadas.lng();
-  //   app.cargaDatos();
-  // });
 
   marker.addListener('dragend', function(){
     var coordenadas = this.getPosition();
@@ -321,5 +278,4 @@ function crearMapa(){
     longitud = coordenadas.lng();
     app.cargaDatos();
   });
-
 }

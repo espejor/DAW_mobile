@@ -12,19 +12,7 @@
     <script src="javascript/jquery-2.2.1.min.js"></script>
     <script src="javascript/accesoDatos.js"></script>
     <script src="javascript/jquerymobile/jquery.mobile-1.4.5.min.js"></script>
-    <!-- <script src="javascript/detectmobilebrowser.js"></script> -->
-
-    <!-- <plantilla>
-      <link rel=Stylesheet href="estilos/movil.css" type="text/css" media="screen and (max-width:400px) and (min-width:1px)" />
-      <link rel=Stylesheet href="estilos/movil.css" type="text/css" media="handheld, only screen and (max-device-width:980px)"/>
-      <link rel=Stylesheet href="estilos/tablet.css" type="text/css" media="screen and (max-width:900px) and (min-width:401px)" />
-      <link rel=Stylesheet href="estilos/estilos.css" type="text/css" media="screen and (max-width:1400px) and (min-width:901px)" />
-      <link rel=Stylesheet href="estilos/pchd.css" type="text/css" media="screen and (max-width:3600px) and (min-width:1401px)" />
-    </plantilla> -->
-
-
   </head>
-
 
   <body>
     <div data-role="page" id="home">
@@ -39,6 +27,10 @@
           <img id="flechaWind" src= "images/flechaN.png">
           <p id="js_w_windS"></p>
         </div>
+      </div>
+    </header>
+      <div data-role="content">
+
         <div class="busqueda">
           <form id="newSolicitudForm" >
             <div class="input_text" data-role="fieldcontain">
@@ -49,9 +41,7 @@
             </div>
           </form>
         </div>
-      </div>
-    </header>
-      <div data-role="content">
+
         <ul data-role="listview" >
           <li><a href="#forecast">Previsión a 7 días</a></li>
           <li><a href="#mapa">Buscar en mapa</a></li>
@@ -115,7 +105,14 @@
     <!---Inicio Página enlaces----------------->
     <div data-role="page" id="enlaces">
       <!---Inicio Header mapa----------------->
-       <h1> Enlaces  </h1>
+      <header data-role="header" data-position="fixed" >
+        <h1> Enlaces  </h1>
+      </header>
+      <div data-role="content" id="content_enlaces">
+        Esta aplicación ha obtenido los datos de los siguientes sitios:
+        - https://developers.google.com/maps/
+        - http://api.openweathermap.org
+      </div>
        <footer data-role="footer">
          <div data-role="navbar" data-theme="a" data-position="fixed" data-id="pie_comun">
             <ul>
@@ -127,5 +124,24 @@
           </div>
        </footer>
     </div>
+
+    <div data-role="errores" id="errores">
+      <header data-role="header">
+        <h1>Error</h1>
+      </header>
+      <div data-role="content" id="content_error">
+      </div>
+      <footer data-role="footer">
+         <div data-role="navbar" data-theme="a" data-position="fixed" data-id="pie_comun">
+            <ul>
+              <li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+              <li><a href="#forecast" data-icon="calendar">Previsión</a></li>
+              <li><a href="#mapa" data-icon="star">Mapa</a></li>
+              <li><a href="#enlaces" data-icon="info">Enlaces</a></li>
+            </ul>
+          </div>
+       </footer>
+     </div>
+
   </body>
 </html>
