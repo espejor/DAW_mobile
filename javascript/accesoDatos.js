@@ -256,33 +256,33 @@ app.muestra_frcst = function() {
   $('#contenido').css("height","auto");
   $('#contenido').attr("title","forecast");
 
-  var txt = "<div class='ui-grid-d'>";
+  var txt = "<ul data-role='listview'>";
   for (i=0;i<7;i++){
     var j = i.toString();
     txt = txt +
-      "<div class='Dia' id='dia_" + i + "'>" +
-        "<div class='ui-block-a'>" +
-          "<span id='dia_sem_frcst_" + i + "'>" + getDiaSemana(app.fecha_frcst[i].getDay()) + " </span>" +
-          "<span id='dia_mes_frcst_" + i + "'>" + app.fecha_frcst[i].getDate() + " </span>" +
-          "<span id='mes_frcst_" + i + "'>" + getMes(app.fecha_frcst[i].getMonth()) + "</span>" +
+      "<li class='Dia' id='dia_" + i + "'>" +
+        "<div>" +
+          "<img class='ui-li-icon' id='icon_frcst_" + i + "' src='" + app.icono_frcst[i] + "'>" +
         "</div>" +
-        "<div class='ui-block-b'>" +
-          "<img id='icon_frcst_" + i + "' src='" + app.icono_frcst[i] + "'>" +
+        "<div>" +
+            "<p id='dia_sem_frcst_" + i + "'>" + getDiaSemana(app.fecha_frcst[i].getDay()) + " </p>" +
+            "<span id='dia_mes_frcst_" + i + "'>" + app.fecha_frcst[i].getDate() + " </span>" +
+            "<span id='mes_frcst_" + i + "'>" + getMes(app.fecha_frcst[i].getMonth()) + "</span>" +
         "</div>" +
-        "<div class='ui-block-c'>" +
+        "<div>" +
           "<p class= 'tmp_frcst_max' id='tmp_frcst_max_" + i + "'>" + app.temp_max_frcst[i] + " ºC</p>" +
           "<p class= 'tmp_frcst_min' id='tmp_frcst_min_" + i + "'>" + app.temp_min_frcst[i] + " ºC</p>" +
         "</div>" +
-        "<div class='ui-block-d'>" +
+        "<div>" +
             "<p class= 'wind_frcst_vel' id='wind_frcst_vel_" + i + "'>" + app.windSpeed_frcst[i] + " m/s</p>" +
             "<p class= 'wind_frcst_dir' id='wind_frcst_dir_" + i + "'>" + app.windDir_frcst[i] + " º</p>" +
         "</div>" +
-        "<div class='ui-block-e'>" +
+        "<div>" +
           "<span id='humedad_frcst_" + i + "'>" + app.humedad_frcst[i] + " %</span>" +
         "</div>" +
-      "</div>";
+      "</li>";
   }
-  txt = txt + "</div>";
+  txt = txt + "</ul>";
   $('#contenido').append(txt);
 }
 
