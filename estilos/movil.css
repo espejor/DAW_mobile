@@ -51,9 +51,17 @@ div.Dia{
 }
 
 .ui-listview>.ui-li-static {
-    padding: .2em 1em;
+    padding: .1em 1em;
 }
 
 #icon_humedad{
   width: 20px;
+}
+
+#icon_container{
+  margin: .1em;
+}
+
+.ui-listview>li p .tmp_frcst_max{
+  font-weight: bold;
 }
