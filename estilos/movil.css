@@ -70,6 +70,10 @@ div.Dia{
   font-weight: bold;
 }
 
+#content_mapa{
+  height: 100%;
+}
+
 #contenido_mapa{
-  height: 1000px;
+  height: 100%;
 }
