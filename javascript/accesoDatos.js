@@ -262,7 +262,7 @@ app.muestra_frcst = function() {
     txt = txt +
       "<li>" +
         "<div class='Dia' id='dia_" + i + "'>" +
-          "<div class='col'>" +
+          "<div class='col icono' >" +
             "<img class='ui-li-icon' id='icon_frcst_" + i + "' src='" + app.icono_frcst[i] + "'>" +
           "</div>" +
           "<div class='col'>" +
@@ -278,8 +278,8 @@ app.muestra_frcst = function() {
               "<p class= 'wind_frcst_vel' id='wind_frcst_vel_" + i + "'>" + app.windSpeed_frcst[i] + " m/s</p>" +
               "<p class= 'wind_frcst_dir' id='wind_frcst_dir_" + i + "'>" + app.windDir_frcst[i] + " º</p>" +
           "</div>" +
-          "<div class='col'>" +
-            "<span id='humedad_frcst_" + i + "'>" + app.humedad_frcst[i] + " %</span>" +
+          "<div class='col humedad'>" +
+            "<p id='humedad_frcst_" + i + "'>" + app.humedad_frcst[i] + " %</p>" +
           "</div>" +
         "</div>" +
       "</li>";

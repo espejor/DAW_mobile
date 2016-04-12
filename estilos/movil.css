@@ -30,14 +30,24 @@ div.Dia{
 }
 
 .col{
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.icono{
+  padding-left: 3px;
+}
+
+.humedad{
+  padding-right: 3px;
 }
 
 .tmp_frcst_max{
   color: red;
+  font-weight: bold;
 }
 
 .tmp_frcst_min{
   color: blue;
+  font-weight: bold;
 }
