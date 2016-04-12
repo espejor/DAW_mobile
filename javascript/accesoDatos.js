@@ -256,13 +256,15 @@ app.muestra_frcst = function() {
   $('#contenido').css("height","auto");
   $('#contenido').attr("title","forecast");
 
-  var txt = "<ul data-role='listview'>";
+  var txt = "<ul data-role='listview' data-inset='true'>";
   for (i=0;i<7;i++){
     var j = i.toString();
     txt = txt +
       "<li>" +
         "<div class='Dia' id='dia_" + i + "'>" +
+          "<div>" +
             "<img class='ui-li-icon' id='icon_frcst_" + i + "' src='" + app.icono_frcst[i] + "'>" +
+          "</div>" +
           "<div>" +
               "<p id='dia_sem_frcst_" + i + "'>" + getDiaSemana(app.fecha_frcst[i].getDay()) + " </p>" +
               "<span id='dia_mes_frcst_" + i + "'>" + app.fecha_frcst[i].getDate() + " </span>" +
