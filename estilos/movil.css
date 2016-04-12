@@ -23,3 +23,7 @@ div.viento{
 img #flechaWind{
   width: 25px;
 }
+
+div.Dia{
+  display: flex;
+}
