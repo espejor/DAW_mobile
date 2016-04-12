@@ -80,7 +80,7 @@ $(document).bind( 'mobileinit',function(){
 
 function miTiempo(){
   getLocation();
-  app.cargaDatos();
+//  app.cargaDatos();
 }
 
 function cargaChunks(){
