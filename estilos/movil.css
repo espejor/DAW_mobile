@@ -34,26 +34,26 @@ div.Dia{
   padding-right: 10px;
 }
 
-.icono{
+.icon{
   padding-left: 3px;
 }
 
 .humedad{
   padding-right: 3px;
-  span{
-    font-weight: bold;
-  }
 }
 
-
-.wind p{
-  font-weight: bold;
-}
-
-.tmp_frcst_max p{
+.tmp_frcst_max{
   color: red;
 }
 
-.tmp_frcst_min p{
+.tmp_frcst_min{
   color: blue;
+}
+
+.ui-listview>.ui-li-static {
+    padding: .2em 1em;
+}
+
+#icon_humedad{
+  width: 30px;
 }

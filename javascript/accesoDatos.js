@@ -255,7 +255,7 @@ app.muestra_frcst = function() {
   $('#contenido').html("");
   $('#contenido').css("height","auto");
   $('#contenido').attr("title","forecast");
-
+  $('#cabecera_frcst').html("Previsión a 7 días para " + app.municipio.toUpperCase());
   var txt = "<ul data-role='listview' data-inset='true'>";
   for (i=0;i<7;i++){
     var j = i.toString();
@@ -279,6 +279,7 @@ app.muestra_frcst = function() {
               "<p class= 'wind_frcst_dir' id='wind_frcst_dir_" + i + "'>" + app.windDir_frcst[i] + " º</p>" +
           "</div>" +
           "<div class='col humedad'>" +
+            "<img class='ui-li-icon' id='icon_humedad' src='images/iconos/humedad.png'>" +
             "<span  id='humedad_frcst_" + i + "'>" + app.humedad_frcst[i] + " %</span>" +
           "</div>" +
         "</div>" +
