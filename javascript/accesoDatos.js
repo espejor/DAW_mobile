@@ -262,23 +262,23 @@ app.muestra_frcst = function() {
     txt = txt +
       "<li>" +
         "<div class='Dia' id='dia_" + i + "'>" +
-          "<div>" +
+          "<div class='col'>" +
             "<img class='ui-li-icon' id='icon_frcst_" + i + "' src='" + app.icono_frcst[i] + "'>" +
           "</div>" +
-          "<div>" +
+          "<div class='col'>" +
               "<p id='dia_sem_frcst_" + i + "'>" + getDiaSemana(app.fecha_frcst[i].getDay()) + " </p>" +
               "<span id='dia_mes_frcst_" + i + "'>" + app.fecha_frcst[i].getDate() + " </span>" +
               "<span id='mes_frcst_" + i + "'>" + getMes(app.fecha_frcst[i].getMonth()) + "</span>" +
           "</div>" +
-          "<div>" +
+          "<div class='col'>" +
             "<p class= 'tmp_frcst_max' id='tmp_frcst_max_" + i + "'>" + app.temp_max_frcst[i] + " ºC</p>" +
             "<p class= 'tmp_frcst_min' id='tmp_frcst_min_" + i + "'>" + app.temp_min_frcst[i] + " ºC</p>" +
           "</div>" +
-          "<div>" +
+          "<div class='col'>" +
               "<p class= 'wind_frcst_vel' id='wind_frcst_vel_" + i + "'>" + app.windSpeed_frcst[i] + " m/s</p>" +
               "<p class= 'wind_frcst_dir' id='wind_frcst_dir_" + i + "'>" + app.windDir_frcst[i] + " º</p>" +
           "</div>" +
-          "<div>" +
+          "<div class='col'>" +
             "<span id='humedad_frcst_" + i + "'>" + app.humedad_frcst[i] + " %</span>" +
           "</div>" +
         "</div>" +

@@ -26,4 +26,18 @@ img #flechaWind{
 
 div.Dia{
   display: flex;
+  font-weight: bold;
+}
+
+.col{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.tmp_frcst_max{
+  color: red;
+}
+
+.tmp_frcst_min{
+  color: blue;
 }
