@@ -65,9 +65,8 @@ div.Dia{
 .ui-header .ui-title{
   margin: 0 1%;
 }*/
-.ui-header .ui-title, .ui-footer .ui-title{
-  margin: 0 1%;
-  
+.ui-header .ui-title{
+  margin: 0 1% !important;  
 }
 
 .tmp_frcst_max p{
