@@ -61,3 +61,11 @@ div.Dia{
 #icon_container{
   margin: .1em;
 }
+
+.ui-title #cabecera_frcst h1{
+  margin: 0 1%;
+}
+
+.tmp_frcst_max p{
+  font-weight: bold;
+}
