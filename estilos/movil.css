@@ -69,3 +69,7 @@ div.Dia{
 .tmp_frcst_max p{
   font-weight: bold;
 }
+
+#contenido_mapa{
+  height: 1000px;
+}
