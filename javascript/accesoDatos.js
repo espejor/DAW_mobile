@@ -270,7 +270,7 @@ app.muestra_frcst = function() {
               "<span id='dia_mes_frcst_" + i + "'>" + app.fecha_frcst[i].getDate() + " </span>" +
               "<span id='mes_frcst_" + i + "'>" + getMes(app.fecha_frcst[i].getMonth()) + "</span>" +
           "</div>" +
-          "<div class='col'>" +
+          "<div class='col wind'>" +
             "<p class= 'tmp_frcst_max' id='tmp_frcst_max_" + i + "'>" + app.temp_max_frcst[i] + " ºC</p>" +
             "<p class= 'tmp_frcst_min' id='tmp_frcst_min_" + i + "'>" + app.temp_min_frcst[i] + " ºC</p>" +
           "</div>" +
@@ -279,7 +279,7 @@ app.muestra_frcst = function() {
               "<p class= 'wind_frcst_dir' id='wind_frcst_dir_" + i + "'>" + app.windDir_frcst[i] + " º</p>" +
           "</div>" +
           "<div class='col humedad'>" +
-            "<p id='humedad_frcst_" + i + "'>" + app.humedad_frcst[i] + " %</p>" +
+            "<span  id='humedad_frcst_" + i + "'>" + app.humedad_frcst[i] + " %</span>" +
           "</div>" +
         "</div>" +
       "</li>";

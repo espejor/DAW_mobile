@@ -40,14 +40,20 @@ div.Dia{
 
 .humedad{
   padding-right: 3px;
+  span{
+    font-weight: bold;
+  }
 }
 
-.tmp_frcst_max{
+
+.wind p{
+  font-weight: bold;
+}
+
+.tmp_frcst_max p{
   color: red;
-  font-weight: bold;
 }
 
-.tmp_frcst_min{
+.tmp_frcst_min p{
   color: blue;
-  font-weight: bold;
 }
