@@ -304,8 +304,8 @@ function crearMapa(){
   latlon = new google.maps.LatLng(latitud, longitud)
   // mapholder = document.getElementById('contenido')
   // mapholder.style.height = '250px';
-  $('#contenido').css("height","500px");
-  $('#contenido_mapa').attr("title","mapa");
+  //$('#contenido_mapa').css("height","100");
+//  $('#contenido_mapa').attr("title","mapa");
 
   var myOptions = {
     center:latlon,zoom:8,
@@ -314,7 +314,7 @@ function crearMapa(){
     navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
   }
 
-  var map = new google.maps.Map(document.getElementById("contenido"), myOptions);
+  var map = new google.maps.Map(document.getElementById("contenido_mapa"), myOptions);
   var marker = new google.maps.Marker({
     position:latlon,
     map:map,
