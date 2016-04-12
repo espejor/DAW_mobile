@@ -62,7 +62,7 @@ div.Dia{
   margin: .1em;
 }
 
-.ui-title{
+.ui-header .ui-title{
   margin: 0 1%;
 }
 
@@ -71,7 +71,7 @@ div.Dia{
 }
 
 #content_mapa{
-  height: 100%;
+  height: 480px;
 }
 
 #contenido_mapa{
