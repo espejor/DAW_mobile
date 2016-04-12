@@ -17,13 +17,13 @@ function getLocation(){
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(cargaPosicion,falloPosicion,geoData);
     }
-    app.cargaDatos();
   }
 
 
 function cargaPosicion(position) {
   latitud = position.coords.latitude;
   longitud = position.coords.longitude;
+  app.cargaDatos();
 }
 
 function falloPosicion(objPositionError){
