@@ -301,7 +301,7 @@ function crearMapa(){
     navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
   }
 
-  var map = new google.maps.Map($('#contenido_mapa'), myOptions);
+  var map = new google.maps.Map(document.getElementById("contenido_mapa"), myOptions);
   var marker = new google.maps.Marker({
     position:latlon,
     map:map,
