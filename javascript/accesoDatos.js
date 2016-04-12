@@ -106,18 +106,18 @@ app.cargaDatos = function() {
     success: function(data) {
       app.datos = data;
       app.procesaDatos();
-      if ($('#contenido').attr("title") == "forecast"){
+//      if ($('#contenido').attr("title") == "forecast"){
         app.cargaDatosFrcst();
-      }
-      if ($('#contenido_mapa').attr("title") == "mapa"){
+      // }
+      // if ($('#contenido_mapa').attr("title") == "mapa"){
         obtenerCoordenada();
         crearMapa();
         $('#cabecera_mapa').html("El tiempo en " + app.municipio.toUpperCase())
-      }
+//      }
     },
     error: function() {
-      $('#contenido').load("error.html");
-      $('#contenido').attr("title","error");
+//      $('#contenido').load("error.html");
+//      $('#contenido').attr("title","error");
     }
   });
 }
@@ -155,8 +155,8 @@ app.cargaDatosFrcst = function() {
     },
     error: function() {
 //      alert("Ups! No puedo obtener información de la previsión a una semana");
-      $('#contenido').load("errorFrcst.html");
-      $('#contenido').attr("title","errorFrcst");
+      // $('#contenido').load("errorFrcst.html");
+      // $('#contenido').attr("title","errorFrcst");
     }
   });
 }
@@ -242,7 +242,7 @@ app.muestra_frcst = function() {
   //$('#contenido').load("section_forecast.html");
   $('#contenido').html("");
   $('#contenido').css("height","auto");
-  $('#contenido').attr("title","forecast");
+//  $('#contenido').attr("title","forecast");
   $('#cabecera_frcst').html("Previsión a 7 días para " + app.municipio.toUpperCase());
   var txt = "<ul data-role='listview' data-inset='true'>";
   for (i=0;i<7;i++){
