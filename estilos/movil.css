@@ -61,17 +61,17 @@ div.Dia{
 #icon_container{
   margin: .1em;
 }
-
+/*
 .ui-header .ui-title{
   margin: 0 1%;
-}
+}*/
 
 .tmp_frcst_max p{
   font-weight: bold;
 }
 
 #content_mapa{
-  height: 480px;
+  height: 460px;
 }
 
 #contenido_mapa{

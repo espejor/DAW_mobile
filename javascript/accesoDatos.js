@@ -84,7 +84,7 @@ function miTiempo(){
 }
 
 function cargaChunks(){
-  $('#contenido').css("height","auto");
+//  $('#contenido').css("height","auto");
 //  $('#contenido').attr("title","inicio");
 //  $('#nav_movil').load("iconos.html");
 //  $('#contenido').load("iconos.html");
@@ -241,7 +241,7 @@ app.muestra = function() {
 app.muestra_frcst = function() {
   //$('#contenido').load("section_forecast.html");
   $('#contenido').html("");
-  $('#contenido').css("height","auto");
+//  $('#contenido').css("height","auto");
 //  $('#contenido').attr("title","forecast");
   $('#cabecera_frcst').html("Previsión a 7 días para " + app.municipio.toUpperCase());
   var txt = "<ul data-role='listview' data-inset='true'>";
@@ -301,12 +301,12 @@ function crearMapa(){
     navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
   }
 
-  var map = new google.maps.Map(document.getElementById("contenido_mapa"), myOptions);
+  var map = new google.maps.Map($('#contenido_mapa'), myOptions);
   var marker = new google.maps.Marker({
     position:latlon,
     map:map,
     draggable:true,
-    title:"You are here!"
+    title:"Qué tiempo hace aquí"
   });
   // map.addListener('click', function(e) {
   //   var coordenadas = e.latLng;
