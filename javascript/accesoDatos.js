@@ -69,6 +69,7 @@ function guardaDatos(){
     if (storedData) {
       ArrayData = JSON.parse(storedData);
     }
+    $('#content_enlaces').html(ArrayData.toString());
   }
 }
 
