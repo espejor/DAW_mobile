@@ -71,7 +71,7 @@ $(document).ready(function(){
   app.apikey = "05b19ab20e25b29516d13983b8491391";
   app.municipio = "Sevilla";
   if(typeof(Storage) !== "undefined") {
-    var app.busquedas=[];
+    app.busquedas=[];
   }
   miTiempo();
 });
