@@ -44,7 +44,7 @@ function falloPosicion(objPositionError){
 }
 
 var geoData = {
-  enableHighAccuracy: false,
+  enableHighAccuracy: true,
   maximumAge        : 30000,
   timeout           : 8000
 };
