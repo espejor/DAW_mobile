@@ -63,7 +63,7 @@ function asignaMunicipio(){
 function guardaDatos(){
   if(typeof(Storage) !== "undefined") {
     var ArrayData = [];
-    app.busquedas.push(app.municipio);
+    app.busquedas.push(municipio);
     localStorage.setItem("listaCiudades",JSON.stringify(app.busquedas));
     var storedData = localStorage.getItem("listaCiudades");
     if (storedData) {
