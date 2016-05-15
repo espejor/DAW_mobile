@@ -279,6 +279,7 @@ function crearMapa(){
     draggable:true,
     title:"Qué tiempo hace aquí"
   });
+  google.maps.event.trigger(map, 'resize');
 
   marker.addListener('dragend', function(){
     var coordenadas = this.getPosition();
