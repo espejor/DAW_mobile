@@ -69,7 +69,7 @@ function guardaDatos(){
     if (storedData) {
       ArrayData = JSON.parse(storedData);
     }
-    $('#content_enlaces').html(ArrayData.toString());
+    $('#content_enlaces').html('Hoy he visitado: ' + ArrayData.toString());
   }
 }
 

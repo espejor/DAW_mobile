@@ -85,3 +85,7 @@ div.Dia{
   height: 100%;
   width: 100%;
 }
+
+#content_enlaces{
+  font-weight: bold;  
+}
