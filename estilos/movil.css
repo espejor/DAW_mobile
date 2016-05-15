@@ -24,10 +24,10 @@ img #flechaWind{
   width: 25px;
 }
 
-div.Dia{
+/*div.Dia{
   display: flex;
   font-weight: bold;
-}
+}*/
 
 .col{
   padding-left: 10px;
@@ -87,5 +87,5 @@ div.Dia{
 }
 
 #content_enlaces{
-  font-weight: bold;  
+  font-weight: bold;
 }
