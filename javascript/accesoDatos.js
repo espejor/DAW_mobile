@@ -232,7 +232,7 @@ app.muestra = function() {
 
 app.muestra_frcst = function() {
   //$('#contenido').load("section_forecast.html");
-  $('#contenido').html("");
+  //$('#contenido').html("");
 //  $('#contenido').css("height","auto");
 //  $('#contenido').attr("title","forecast");
   $('#cabecera_frcst').html("Previsión a 7 días para " + app.municipio.toUpperCase());
@@ -266,7 +266,7 @@ app.muestra_frcst = function() {
       "</li>";
   }
   txt = txt + "</ul>";
-  $('#contenido').append(txt);
+  $('#contenido').html(txt);
 }
 
 function getDiaSemana(diaEN){
