@@ -60,7 +60,7 @@ function asignaMunicipio(){
 }
 
 
-$(document).bind( 'mobileinit',function(){
+$(window.document).bind( 'mobileinit',function(){
   // Variables de inico
   app.apikey = "05b19ab20e25b29516d13983b8491391";
   app.municipio = "Sevilla";
