@@ -1,4 +1,4 @@
-
+﻿
 
 //"use strict";
 var app = {};
@@ -40,7 +40,6 @@ function falloPosicion(objPositionError){
     default:
       alert("Error desconocido.");
   }
-  app.cargaDatos();
 }
 
 var geoData = {
@@ -59,16 +58,25 @@ function asignaMunicipio(){
 //  app.cargaDatosFrcst();
 }
 
+function onLoad() {
+    $(document).bind( "deviceready", function( event ) {
+        onDeviceReady();
+    });
+}
 
-$(document).bind( 'mobileinit',function(){
-  // Variables de inico
-  app.apikey = "05b19ab20e25b29516d13983b8491391";
-  app.municipio = "Sevilla";
-  miTiempo();
-});
+function onDeviceReady() {
+  		// Variables de inico
+  		app.apikey = "05b19ab20e25b29516d13983b8491391";
+  		app.municipio = "Sevilla";
+  		miTiempo();
+}
+
+
+
+
 
 function miTiempo(){
-  getLocation();  // Función asíncrona
+  getLocation();
 }
 
 app.cargaDatos = function() {

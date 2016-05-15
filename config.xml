@@ -1,0 +1,11 @@
+    <widget id="MiTiempo2" version="0.0.1">
+        <name>MiTiempo2</name>
+        <description>
+            Nuevo intento de transformar Mi Tiempo.
+        </description>
+        <author href="http://cordova.io">
+            Yo, mi, me, conmigo
+        </author>
+        <content src="index.html" />
+        <access origin="*" />
+    </widget>
