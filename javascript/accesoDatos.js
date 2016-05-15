@@ -59,12 +59,19 @@ function asignaMunicipio(){
 //  app.cargaDatosFrcst();
 }
 
-
-$(window.document).bind( 'mobileinit',function(){
+$(document).ready(function(){
   // Variables de inico
   app.apikey = "05b19ab20e25b29516d13983b8491391";
   app.municipio = "Sevilla";
   miTiempo();
+});
+
+
+$(window.document).bind( 'mobileinit',function(){
+  // Variables de inico
+//  app.apikey = "05b19ab20e25b29516d13983b8491391";
+//  app.municipio = "Sevilla";
+//  miTiempo();
 });
 
 function miTiempo(){
