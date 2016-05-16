@@ -236,7 +236,7 @@ app.muestra_frcst = function() {
 //  $('#contenido').css("height","auto");
 //  $('#contenido').attr("title","forecast");
   $('#cabecera_frcst').html("Previsión a 7 días para " + app.municipio.toUpperCase());
-  var txt = "<ul data-role='listview' data-inset='true'>";
+  var txt = "";
   for (i=0;i<7;i++){
     var j = i.toString();
     txt = txt +
@@ -265,8 +265,7 @@ app.muestra_frcst = function() {
         "</div>" +
       "</li>";
   }
-  txt = txt + "</ul>";
-  $('#contenido').html(txt);
+  $('#prevision').html(txt);
 }
 
 function getDiaSemana(diaEN){
