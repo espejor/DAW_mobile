@@ -266,6 +266,7 @@ app.muestra_frcst = function() {
       "</li>";
   }
   $('#prevision').html(txt);
+  $("#css_base").attr("href", "javascript/jquerymobile/jquery.mobile-1.4.5.min.css");
 }
 
 function getDiaSemana(diaEN){
