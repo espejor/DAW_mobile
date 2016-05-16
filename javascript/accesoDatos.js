@@ -240,7 +240,7 @@ app.muestra_frcst = function() {
   for (i=0;i<7;i++){
     var j = i.toString();
     txt = txt +
-      "<li>" +
+      "<li class='ui-li-static ui-body-inherit ui-first-child'>" +
         "<div class='Dia' id='dia_" + i + "'>" +
           "<div class='col icono' >" +
             "<img class='ui-li-icon' id='icon_frcst_" + i + "' src='" + app.icono_frcst[i] + "'>" +
@@ -266,7 +266,6 @@ app.muestra_frcst = function() {
       "</li>";
   }
   $('#prevision').html(txt);
-  $("#css_base").attr("href", "javascript/jquerymobile/jquery.mobile-1.4.5.min.css");
 }
 
 function getDiaSemana(diaEN){
